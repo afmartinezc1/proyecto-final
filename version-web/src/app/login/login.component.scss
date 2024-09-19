@@ -1,0 +1,57 @@
+.login-container {
+  background-image: url("/assets/bg1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+}
+
+.login-form {
+  align-self: center;
+  width: 50vw;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 6vh;
+  padding-bottom: 4vh;
+
+  img{
+    position: fixed;
+    left: 50%;
+    top: 10vh;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    width: 6vw;
+  }
+
+  mat-form-field {
+    width: 80%;
+    margin-bottom: 2vh;
+  }
+
+  .text-divider {
+    padding: 1vw 5vw 1vw 5vw;
+  }
+
+  button {
+    width: 80%;
+    font-size: 1em;
+    height: 5vh;
+  }
+
+  .facebook {
+    background-color: #4267B2;
+    color: white;
+  }
+
+  .google {
+    background-color: #DB4437;
+    color: white;
+  }
+}
