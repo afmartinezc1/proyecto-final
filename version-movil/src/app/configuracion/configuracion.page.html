@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title slot="start">
+      Configuración
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-text>
+    <h1>Anticipación</h1>
+  </ion-text>
+  <ion-select mode="md" label="Notificar antes de..." label-placement="floating" fill="outline">
+    <ion-select-option value="5">5 Minutos</ion-select-option>
+    <ion-select-option value="15">15 Minutos</ion-select-option>
+    <ion-select-option value="30">30 Minutos</ion-select-option>
+    <ion-select-option value="60">1 Hora</ion-select-option>
+  </ion-select>
+
+  <ion-item-divider mode="md"></ion-item-divider>
+
+  <ion-text>
+    <h1>Notificaciones</h1>
+  </ion-text>
+  <ion-toggle mode="ios" justify="space-between" checked="true">Sonido</ion-toggle>
+  <ion-toggle mode="ios" justify="space-between" checked="true">Llamada</ion-toggle>
+  <ion-toggle mode="ios" justify="space-between" checked="true">Vibracion</ion-toggle>
+  <ion-toggle mode="ios" justify="space-between" checked="true">Popup</ion-toggle>
+
+  <ion-item-divider mode="md"></ion-item-divider>
+
+  <ion-text>
+    <h1>Sonido</h1>
+  </ion-text>
+  <ion-select mode="md" label="Sonido de la alarma" label-placement="floating" fill="outline">
+    <ion-select-option value="1">Sonido_alarma_tranquilo.mp3</ion-select-option>
+    <ion-select-option value="2">Sonido_alarma_regular.mp3</ion-select-option>
+    <ion-select-option value="3">Sonido_alarma_lento.mp3</ion-select-option>
+    <ion-select-option value="4">Sonido_alarma_grave.mp3</ion-select-option>
+  </ion-select>
+
+  <ion-button shape="round">Guardar</ion-button>
+</ion-content>
