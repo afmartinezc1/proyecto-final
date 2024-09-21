@@ -38,7 +38,7 @@ h1, h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #ccc;
+  border: 2px dashed $verde100-color;
   height: 200px;
   width: 100%;
   border-radius: 10px;
@@ -67,12 +67,20 @@ h1, h3 {
   border: none;
 }
 
+.upload-box p {
+  color: $verde60-color;
+}
+
 .cargarBtn {
   background-color: $verde80-color;
-  color: white;
+  color: $verde0-color;
   width: 300px;
 }
 
 .cargarBtn:hover {
   background-color: $verde80-color;
+}
+
+mat-icon {
+  color: $verde100-color;
 }

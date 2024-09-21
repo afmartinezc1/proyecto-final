@@ -71,7 +71,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #ccc;
+  border: 1px dashed $verde100-color;
   height: 80px;
   width: 100%;
   border-radius: 10px;
@@ -100,6 +100,10 @@ button {
   border: none;
 }
 
+.upload-box p {
+  color: $verde60-color;
+}
+
 .custom-height {
   display: flex;
   height: 80px;
@@ -107,10 +111,13 @@ button {
 
 .guardar {
   background-color: $verde100-color;
-  color: white;
+  color: $verde0-color;
 }
 
 .guardar:hover {
   background-color: $verde80-color;
 }
 
+mat-icon {
+  color: $verde100-color;
+}
