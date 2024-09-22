@@ -6,6 +6,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { Observable, Observer } from 'rxjs';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu'
+import { Router } from '@angular/router';
 
 export interface TabInfo {
   label: string;
@@ -22,13 +26,14 @@ interface Medication {
 @Component({
   selector: 'app-listar-alarmas',
   standalone: true,
-  imports: [MatTabsModule, AsyncPipe, MatButtonModule, MatIconModule, MatTableModule, MatPaginatorModule, NgIf],
+  imports: [MatTabsModule, AsyncPipe, MatButtonModule, MatIconModule, MatTableModule, MatPaginatorModule, NgIf, MatCardModule, MatListModule, MatMenuModule],
   templateUrl: './listar-alarmas.component.html',
   styleUrl: './listar-alarmas.component.scss'
 })
 export class ListarAlarmasComponent {
 
   displayedColumns: string[] = ['medicamento', 'dias', 'cantidadTomas', 'horas', 'acciones'];
+  isAnimationDone: boolean = false;
 
   medications: Medication[] = [
     { medicamento: 'Fluticasona', dias: 'Todos los días', cantidadTomas: 2, horas: '2:00 pm' },
@@ -40,7 +45,7 @@ export class ListarAlarmasComponent {
 
   selectedTabIndex: number = 0;
 
-  constructor() {
+  constructor(private router: Router) {
     this.asyncTabs = new Observable((observer: Observer<TabInfo[]>) => {
       setTimeout(() => {
         observer.next([
@@ -53,6 +58,15 @@ export class ListarAlarmasComponent {
 
   onTabChanged(index: number): void {
     this.selectedTabIndex = index;
+    this.isAnimationDone = false;
+  }
+
+  onAnimationDone() {
+    this.isAnimationDone = true;
+  }
+
+  goRecordatorioOrden() {
+    this.router.navigate(['/', 'crear-recordatorio-orden']);
   }
 
 }
