@@ -1,0 +1,54 @@
+$verde0-color:   #FFFFFF;
+$verde20-color:  #EEF7FF;
+$verde40-color:  #CDE8E5;
+$verde60-color:  #B1C1C1;
+$verde80-color:  #7AB2B2;
+$verde100-color: #4D869C;
+
+ion-content {
+  --background: url("/assets/bg1.jpg") no-repeat center center/cover;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.text-row {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  color: $verde100-color;
+}
+
+.title-row {
+  text-align: center;
+  margin: 5px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: $verde80-color;
+  -webkit-text-stroke: 3px $verde100-color;
+
+  text-shadow:
+    0 0 3px $verde100-color,
+    0 0 3px $verde100-color,
+    0 0 3px $verde100-color,
+    0 0 3px $verde100-color;
+
+  margin-top: 10px;
+}
+
+.custom-buttons{
+  bottom: 4vh;
+  position: absolute;
+  width: 75%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  ion-button{
+    margin-bottom: 20px;
+  }
+}

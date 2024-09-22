@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'detalle-medicamentos',
     loadChildren: () => import('./detalle-medicamentos/detalle-medicamentos.module').then( m => m.DetalleMedicamentosPageModule)
+  },
+  {
+    path: 'historial-tomas',
+    loadChildren: () => import('./historial-tomas/historial-tomas.module').then( m => m.HistorialTomasPageModule)
+  },
+  {
+    path: 'notificar-toma',
+    loadChildren: () => import('./notificar-toma/notificar-toma.module').then( m => m.NotificarTomaPageModule)
   }
 ];
 @NgModule({

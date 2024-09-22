@@ -1,0 +1,28 @@
+<div class="custom-background">
+  <ion-header mode="ios">
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-buttons>
+      <ion-title slot="start">
+        Historial de tomas
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <div *ngFor="let dia of historial">
+      <ion-item-divider>
+        <ion-label><strong>{{ dia.fecha }}</strong></ion-label>
+      </ion-item-divider>
+      <ion-card *ngFor="let toma of dia.tomas">
+        <ion-card-header>
+          <ion-card-subtitle>{{ toma.estado }}</ion-card-subtitle>
+          <ion-card-title>{{ toma.hora }}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </ion-list>
+</ion-content>
+</div>
