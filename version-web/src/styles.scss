@@ -62,3 +62,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-divider::after {
   margin-left: var(--text-divider-gap);
 }
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #EEF7FF;
+}
