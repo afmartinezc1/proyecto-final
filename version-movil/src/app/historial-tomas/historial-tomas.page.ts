@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IonRouterOutlet } from '@ionic/angular';
 
 export interface Toma {
   hora: string;
@@ -17,10 +18,12 @@ export interface Dia {
 })
 export class HistorialTomasPage implements OnInit {
 
-  constructor() { }
+  constructor(private routerOutlet: IonRouterOutlet) { }
 
   ngOnInit() {
   }
+
+  goBack() { this.routerOutlet.pop(); }
 
   historial: Dia[] = [
     {

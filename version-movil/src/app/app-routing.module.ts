@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'notificar-toma',
     loadChildren: () => import('./notificar-toma/notificar-toma.module').then( m => m.NotificarTomaPageModule)
+  },
+  {
+    path: 'simular-notificacion',
+    loadChildren: () => import('./simular-notificacion/simular-notificacion.module').then( m => m.SimularNotificacionPageModule)
   }
 ];
 @NgModule({
