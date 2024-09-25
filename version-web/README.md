@@ -1,27 +1,101 @@
-# VersionWeb
+# Proyecto de Gestión de Medicamentos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Este proyecto consta de dos versiones: una **móvil** y otra **web**, diseñadas para ayudar en la gestión y el seguimiento del consumo de medicamentos. A continuación, se detalla cómo instalar y ejecutar ambas versiones, así como las pantallas disponibles.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tabla de Contenidos
+- [Introducción](#introducción)
+- [Requisitos del Sistema](#requisitos-del-sistema)
+- [Sección Móvil](#sección-móvil)
+  - [Pantallas Móviles](#pantallas-móviles)
+  - [Instalación y Ejecución](#instalación-y-ejecución)
+  - [Instalación APK en Android](#instalación-apk-en-android)
+- [Sección Web](#sección-web)
+  - [Pantallas Web](#pantallas-web)
+  - [Instalación y Ejecución](#instalación-y-ejecución-web)
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Introducción
 
-## Build
+Este proyecto tiene como objetivo mejorar la gestión de la toma de medicamentos y generar notificaciones automáticas para los usuarios. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Requisitos del Sistema
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para ejecutar correctamente las aplicaciones, asegúrate de tener instalados los siguientes requisitos:
 
-## Running end-to-end tests
+- **Node.js** versión 20.5.0 o superior.
+- **Ionic CLI** (para la versión móvil).
+- **Angular CLI** (para la versión web).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## Sección Móvil
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Pantallas Móviles
+
+#### Pantallas de Andrés
+- [Configuración](http://localhost:8100/configuracion)
+- [Detalle Medicamentos](http://localhost:8100/detalle-medicamentos)
+- [Historial de Tomas](http://localhost:8100/historial-tomas)
+
+#### Pantallas de Fabián
+- [Simular Notificación](http://localhost:8100/simular-notificacion)
+- [Notificar Toma](http://localhost:8100/notificar-toma)
+- [Detalle de la Orden](http://localhost:8100/detalle-orden)
+
+### Instalación y Ejecución
+
+Para instalar y ejecutar la versión móvil:
+
+1. Ubícate en la carpeta `version-movil`:
+   ```bash
+   cd version-movil
+   ```
+2. Instala las dependencias necesarias:
+   ```bash
+   npm i
+   ```
+3. Para iniciar la aplicación en desarrollo, ejecuta:
+   ```bash
+   ionic serve
+   ```
+
+#### Instalación APK en Android
+  Se incluye un archivo .apk para la instalación directa en dispositivos Android.
+
+
+
+## Sección Web
+
+### Pantallas Webs
+
+#### Pantallas de Andrés
+- 
+- 
+- 
+
+#### Pantallas de Fabián
+- 
+- 
+- 
+
+### Instalación y Ejecución
+
+Para instalar y ejecutar la versión web:
+
+1. Ubícate en la carpeta `version-web`:
+   ```bash
+   cd version-web
+   ```
+2. Instala las dependencias necesarias:
+   ```bash
+   npm i
+   ```
+3. Para iniciar la aplicación en desarrollo, ejecuta:
+   ```bash
+   ng serve -o
+   ```
