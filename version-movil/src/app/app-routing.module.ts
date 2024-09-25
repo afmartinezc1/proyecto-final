@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'simular-notificacion',
     loadChildren: () => import('./simular-notificacion/simular-notificacion.module').then( m => m.SimularNotificacionPageModule)
+  },
+  {
+    path: 'detalle-orden',
+    loadChildren: () => import('./detalle-orden/detalle-orden.module').then( m => m.DetalleOrdenPageModule)
   }
 ];
 @NgModule({

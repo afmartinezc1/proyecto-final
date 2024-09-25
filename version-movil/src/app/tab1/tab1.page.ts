@@ -10,6 +10,6 @@ export class Tab1Page {
   constructor(private router: Router) {}
 
   goToMedicamentos() {
-    this.router.navigate(['/', 'detalle-medicamentos']);
+    this.router.navigate(['/', 'detalle-orden']);
   }
 }
