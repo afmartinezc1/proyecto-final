@@ -15,9 +15,14 @@
 
   <div class="custom-buttons">
     <ion-button expand="block" shape="round" routerLink="/historial-tomas" color="primary">Confirmar toma de medicamento</ion-button>
-    <ion-button expand="block" shape="round" color="secondary"  >Posponer</ion-button>
+    <ion-button expand="block" shape="round" color="secondary" id="present-alert" (click)="goBack()">Posponer</ion-button>
   </div>
 
-
+  <ion-alert
+  trigger="present-alert"
+  header="Confirmación!"
+  message="La alarma se ha pospuesto. Te volverá a alertar en 5 minutos."
+  [buttons]="['Aceptar']"
+></ion-alert>
 
 </ion-content>
