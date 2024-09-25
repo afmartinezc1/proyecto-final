@@ -76,12 +76,12 @@ Para instalar y ejecutar la versión móvil:
 
 #### Pantallas de Andrés
 - http://localhost:4200/login
-- http://localhost:4200/crear-recordatorio
+- http://localhost:4200/crear-recordatorio-orden
 - http://localhost:4200/listar-alarmas (Seccion ordenes medicas)
 
 #### Pantallas de Fabián
 - http://localhost:4200/cargar-orden
-- http://localhost:4200/crear-recordatorio-orden
+- http://localhost:4200/crear-recordatorio
 - http://localhost:4200/listar-alarmas (Seccion alarmas individuales)
 
 ### Instalación y Ejecución
