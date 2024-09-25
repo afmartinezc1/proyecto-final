@@ -69,4 +69,11 @@ export class ListarAlarmasComponent {
     this.router.navigate(['/', 'crear-recordatorio-orden']);
   }
 
+  goAutomaticamente() {
+    this.router.navigate(['/', 'cargar-orden']);
+  }
+
+  goRecordatorioMedicamento() {
+    this.router.navigate(['/', 'crear-recordatorio']);
+  }
 }
