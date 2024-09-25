@@ -26,6 +26,7 @@ $version-web-theme: mat.define-theme((
 // that you are using.
 :root {
   @include mat.all-component-themes($version-web-theme);
+  --mdc-filled-button-container-color: #7AB2B2;
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
@@ -64,5 +65,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
-  color: #EEF7FF;
+  color: #4D869C !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: #B1C1C1 !important;
+}
+
+.mat-mdc-tab-labels {
+  background: aliceblue;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: #EEF7FF !important;
 }

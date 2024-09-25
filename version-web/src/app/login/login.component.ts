@@ -3,6 +3,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,4 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent {}
+export class LoginComponent {
+  constructor(private router: Router) {
+    // ...
+  }
+  goAlarmas() {
+    this.router.navigate(['/', 'listar-alarmas']);
+  }
+}

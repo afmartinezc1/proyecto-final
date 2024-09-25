@@ -43,18 +43,52 @@ $verde100-color: #4D869C;
 }
 
 button {
-  color: $verde0-color !important;
-  background-color: $verde80-color;
-  border: none;
-  padding: 5px 10px;
-  margin: 5px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $verde60-color;
-  }
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
   color: #EEF7FF;
+}
+
+
+.example-card{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 30%;
+  height: 70vh;
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; /* Opcional, para alinear los botones */
+    margin-top: auto; /* Esto asegura que las acciones se peguen al fondo */
+  }
+  mat-card-subtitle{
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  card-content {
+    flex-grow: 1; /* Esto asegura que el contenido ocupe todo el espacio disponible */
+  }
+}
+.fab-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $verde0-color;
+}
+
+.mat-mdc-menu-panel {
+  min-width: 280px !important;
+}
+
+.matMenuText {
+  margin: 0;
+  font-weight: 100;
+}
+
+.mat-mdc-menu-item {
+  margin: 10px;
 }

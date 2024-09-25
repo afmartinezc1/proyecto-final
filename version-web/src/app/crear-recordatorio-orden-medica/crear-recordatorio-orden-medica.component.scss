@@ -1,0 +1,73 @@
+
+$verde0-color:   #FFFFFF;
+$verde20-color:  #EEF7FF;
+$verde40-color:  #CDE8E5;
+$verde60-color:  #B1C1C1;
+$verde80-color:  #7AB2B2;
+$verde100-color: #4D869C;
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+  margin: 20px 0;
+  background-color: $verde20-color;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container-table {
+  padding: 20px;
+  border-spacing: 0;
+}
+
+.header-row {
+  padding: 10px;
+  text-align: center;
+  color: $verde0-color;
+  background-color: $verde80-color;
+  overflow: hidden;
+}
+
+button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.buttons{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+mat-form-field{
+  margin-right: 20px;
+  margin-bottom: 2rem;
+  width: 48%;
+}
+
+.container{
+  padding: 2%;
+}
+
+.background{
+  background-color: $verde40-color;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form{
+  display: flex;
+  align-items: start;
+}
+
+.medicamentos-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

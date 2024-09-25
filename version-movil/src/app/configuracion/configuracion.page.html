@@ -41,5 +41,11 @@
     <ion-select-option value="4">Sonido_alarma_grave.mp3</ion-select-option>
   </ion-select>
 
-  <ion-button shape="round">Guardar</ion-button>
+  <ion-button shape="round" id="present-alert">Guardar</ion-button>
+  <ion-alert
+  trigger="present-alert"
+  header="Exito!"
+  message="Configuración guardada correctamente."
+  [buttons]="['Aceptar']"
+></ion-alert>
 </ion-content>

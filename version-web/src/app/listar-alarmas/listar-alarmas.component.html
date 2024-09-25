@@ -1,11 +1,11 @@
 <div class="background">
   <div class="container">
-    <mat-tab-group (selectedIndexChange)="onTabChanged($event)">
+    <mat-tab-group (selectedIndexChange)="onTabChanged($event)" (animationDone)="onAnimationDone()" fitInkBarToContent>
       @for (tab of asyncTabs | async; track tab) {
         <mat-tab >
           <ng-template mat-tab-label>{{tab.label}}</ng-template>
 
-            <div *ngIf="selectedTabIndex === 0" class="container-table">
+            <div *ngIf="selectedTabIndex === 1 && isAnimationDone" class="container-table">
 
               <mat-table [dataSource]="medications" class="mat-elevation-z8">
                 <!-- Medicamento Column -->
@@ -36,10 +36,10 @@
                 <ng-container matColumnDef="acciones">
                   <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
                   <mat-cell *matCellDef="let element">
-                    <button mat-button>Editar
+                    <button mat-flat-button>Editar
                       <mat-icon>add_circle</mat-icon>
                     </button>
-                    <button mat-button>Eliminar
+                    <button mat-flat-button>Eliminar
                       <mat-icon>delete</mat-icon>
                     </button>
                   </mat-cell>
@@ -51,13 +51,58 @@
 
           </div>
 
-          <div *ngIf="selectedTabIndex === 1">
-            <p>Contenido para Alarmas individuales</p>
-
+          <div *ngIf="selectedTabIndex === 0 && isAnimationDone">
+            <mat-card class="example-card" appearance="outlined">
+              <mat-card-header>
+                <mat-card-title>Diabetes</mat-card-title>
+                <mat-card-subtitle>Enfermedad crónica con niveles altos de glucosa en sangre, causada por la falta de insulina o su uso ineficaz.</mat-card-subtitle>
+              </mat-card-header>
+              <hr style="width: 100%;" >
+              <mat-card-content>
+                <mat-list role="list">
+                  <mat-list-item role="listitem">
+                    <span matListItemTitle>Insulina</span>
+                    <span matListItemLine>7:00 am</span>
+                    <span matListItemLine>Todos los dias</span>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item role="listitem">
+                    <span matListItemTitle>Metformina</span>
+                    <span matListItemLine>8:00 pm</span>
+                    <span matListItemLine>Lun, Mier, Vier</span>
+                  </mat-list-item>
+                </mat-list>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button>Eliminar</button>
+                <button mat-flat-button>Modificar</button>
+              </mat-card-actions>
+            </mat-card>
           </div>
-
         </mat-tab>
       }
     </mat-tab-group>
+    <button mat-fab extended [matMenuTriggerFor]="menu" class="fab-button">
+      <mat-icon>add</mat-icon>
+      Programar alarmas
+    </button>
+
+    <mat-menu #menu="matMenu" xPosition="after">
+      <button mat-menu-item>
+        <mat-icon>attach_file</mat-icon>
+        <span>Automaticamente</span>
+        <p class="matMenuText">A partir de una imagen</p>
+      </button>
+      <button mat-menu-item (click)="goRecordatorioOrden()">
+        <mat-icon>folder</mat-icon>
+        <span>Por orden medica</span>
+        <p class="matMenuText">Para agrupar medicamentos</p>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>schedule</mat-icon>
+        <span>Por medicamento</span>
+        <p class="matMenuText">Para recordatorios individuales</p>
+      </button>
+    </mat-menu>
   </div>
 </div>
