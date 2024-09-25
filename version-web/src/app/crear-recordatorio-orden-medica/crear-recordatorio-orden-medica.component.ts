@@ -17,6 +17,7 @@ import {
   MatDialogContent,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 interface Medication {
   medicamento: string;
@@ -32,6 +33,9 @@ interface Medication {
   styleUrl: './crear-recordatorio-orden-medica.component.scss'
 })
 export class CrearRecordatorioOrdenMedicaComponent {
+
+  constructor(private router: Router) { }
+
   readonly dialog = inject(MatDialog);
   displayedColumns: string[] = ['medicamento', 'dias', 'cantidadTomas', 'horas', 'acciones'];
   isAnimationDone: boolean = false;
@@ -44,6 +48,10 @@ export class CrearRecordatorioOrdenMedicaComponent {
 
   openDialog() {
     this.dialog.open(DialogElementsExampleDialog);
+  }
+
+  goRecordatorioMedicamento() {
+    this.router.navigate(['/', 'crear-recordatorio']);
   }
 }
 

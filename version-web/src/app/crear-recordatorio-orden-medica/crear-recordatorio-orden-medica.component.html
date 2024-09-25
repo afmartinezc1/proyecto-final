@@ -17,7 +17,7 @@
     <mat-divider></mat-divider>
     <div class="medicamentos-title">
       <h1>Medicamentos</h1>
-      <button mat-flat-button class="guardar">Agregar medicamento</button>
+      <button mat-flat-button class="guardar" (click)="goRecordatorioMedicamento()">Agregar medicamento</button>
     </div>
     <mat-table [dataSource]="medications" class="mat-elevation-z8">
       <!-- Medicamento Column -->
@@ -48,7 +48,7 @@
       <ng-container matColumnDef="acciones">
         <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <button mat-flat-button>Editar
+          <button mat-flat-button (click)="goRecordatorioMedicamento()">Editar
             <mat-icon>add_circle</mat-icon>
           </button>
           <button mat-flat-button>Eliminar

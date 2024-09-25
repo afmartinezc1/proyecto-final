@@ -51,7 +51,7 @@
 
           </div>
 
-          <div *ngIf="selectedTabIndex === 0 && isAnimationDone">
+          <div *ngIf="selectedTabIndex === 0 && isAnimationDone" class="row">
             <mat-card class="example-card" appearance="outlined">
               <mat-card-header>
                 <mat-card-title>Diabetes</mat-card-title>
@@ -75,7 +75,34 @@
               </mat-card-content>
               <mat-card-actions>
                 <button mat-stroked-button>Eliminar</button>
-                <button mat-flat-button>Modificar</button>
+                <button mat-flat-button (click)="goRecordatorioOrden()">Modificar</button>
+              </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card" appearance="outlined">
+              <mat-card-header>
+                <mat-card-title>Hipertensión</mat-card-title>
+                <mat-card-subtitle>Enfermedad causada por la presencia de niveles altos de presión arterial.</mat-card-subtitle>
+              </mat-card-header>
+              <hr style="width: 100%;" >
+              <mat-card-content>
+                <mat-list role="list">
+                  <mat-list-item role="listitem">
+                    <span matListItemTitle>Clortalidona</span>
+                    <span matListItemLine>7:00 am</span>
+                    <span matListItemLine>Todos los dias</span>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item role="listitem">
+                    <span matListItemTitle>Espironolactona</span>
+                    <span matListItemLine>5:00 pm</span>
+                    <span matListItemLine>Todos los dias</span>
+                  </mat-list-item>
+                </mat-list>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button>Eliminar</button>
+                <button mat-flat-button (click)="goRecordatorioOrden()">Modificar</button>
               </mat-card-actions>
             </mat-card>
           </div>
@@ -88,7 +115,7 @@
     </button>
 
     <mat-menu #menu="matMenu" xPosition="after">
-      <button mat-menu-item>
+      <button mat-menu-item (click)="goAutomaticamente()">
         <mat-icon>attach_file</mat-icon>
         <span>Automaticamente</span>
         <p class="matMenuText">A partir de una imagen</p>
@@ -98,7 +125,7 @@
         <span>Por orden medica</span>
         <p class="matMenuText">Para agrupar medicamentos</p>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item (click)="goRecordatorioMedicamento()">
         <mat-icon>schedule</mat-icon>
         <span>Por medicamento</span>
         <p class="matMenuText">Para recordatorios individuales</p>

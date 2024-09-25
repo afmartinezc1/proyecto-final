@@ -92,3 +92,9 @@ button {
 .mat-mdc-menu-item {
   margin: 10px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
