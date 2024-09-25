@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe, NgIf, Location } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -34,7 +34,7 @@ interface Medication {
 })
 export class CrearRecordatorioOrdenMedicaComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   readonly dialog = inject(MatDialog);
   displayedColumns: string[] = ['medicamento', 'dias', 'cantidadTomas', 'horas', 'acciones'];
@@ -52,6 +52,10 @@ export class CrearRecordatorioOrdenMedicaComponent {
 
   goRecordatorioMedicamento() {
     this.router.navigate(['/', 'crear-recordatorio']);
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
 
