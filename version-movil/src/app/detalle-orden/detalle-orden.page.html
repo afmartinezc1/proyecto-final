@@ -1,0 +1,43 @@
+<div class="custom-background">
+  <ion-header mode="ios">
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start" (click)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-buttons>
+      <ion-title slot="start">
+        Diabetes
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-title>Insulina</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Medicamento para controlar el azucar en la sangre
+    </ion-card-content>
+    <div align='end' class="ion-padding custom-buttons">
+      <ion-button color="secondary" fill="outline" shape="round">Ver en calendario</ion-button>
+      <ion-button color="primary" fill="outline" shape="round">Ver detalles</ion-button>
+    </div>
+  </ion-card>
+
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-title>Metformina</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Medicamento para regular los niveles de oxigeno en la sangre
+    </ion-card-content>
+    <div align='end' class="ion-padding custom-buttons">
+      <ion-button color="secondary" fill="outline" shape="round">Ver en calendario</ion-button>
+      <ion-button color="primary" fill="outline" shape="round">Ver detalles</ion-button>
+    </div>
+  </ion-card>
+
+</ion-content>
+</div>

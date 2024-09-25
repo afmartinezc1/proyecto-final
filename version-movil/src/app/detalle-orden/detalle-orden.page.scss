@@ -1,0 +1,31 @@
+$verde0-color:   #FFFFFF;
+$verde20-color:  #EEF7FF;
+$verde40-color:  #CDE8E5;
+$verde60-color:  #B1C1C1;
+$verde80-color:  #7AB2B2;
+$verde100-color: #4D869C;
+
+.custom-background {
+  background-color: $verde100-color;
+}
+
+ion-card {
+  border-radius: 15px;
+  margin-bottom: 16px;
+  background-color: $verde0-color;
+}
+
+ion-item-divider {
+  background-color: $verde40-color;
+  font-size: 20px;
+  color: $verde100-color;
+  margin-top: 20px;
+}
+
+.custom-buttons {
+  border-top: 1px solid var(--ion-color-step-150, $verde20-color);
+  ion-button {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}
